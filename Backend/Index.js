@@ -22,3 +22,5 @@ app.listen(3000, () => {
   console.log("env<><>",process.env.LLL);
   
 });
+import authRoutes from "./routes/authroutes.js";
+app.use("/api/auth", authRoutes);
