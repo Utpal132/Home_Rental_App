@@ -72,7 +72,7 @@ const Navbar = () => {
             <path d="M4 12l16 0" />
             <path d="M4 18l16 0" />
           </svg>
-          {!user ? (
+          {!user.user ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -108,10 +108,10 @@ const Navbar = () => {
         )}
         {dropdownMenu && user && (
           <div className="absolute bg-white right-15 sm:right-5 top-20 flex flex-col w-48 p-2.5 border border-gray-300 rounded-2xl shadow-lg z-[999]">
-            <Link to={`/ ${user.user._id}/trips`}>Trip List</Link>
-            <Link to={`/ ${user.user._id}/wishlist`}>Wish List</Link>
-            <Link to={`/ ${user.user._id}/properties`}>Property List</Link>
-            <Link to={`/ ${user.user._id}/reservations`}>Reservation List</Link>
+            <Link to={`/ ${user?.user._id}/trips`}>Trip List</Link>
+            <Link to={`/ ${user?.user._id}/wishlist`}>Wish List</Link>
+            <Link to={`/ ${user?.user._id}/properties`}>Property List</Link>
+            <Link to={`/ ${user?.user._id}/reservations`}>Reservation List</Link>
             <Link to={"/create-listing"}>Become A Host</Link>
           </div>
         )}
